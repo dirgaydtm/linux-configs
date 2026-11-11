@@ -1,0 +1,148 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "padding": {
+      "left": 2,
+      "top": 3,
+      "right": 5
+    },
+    "type": "file-raw",
+    "width": 37,
+    "height": 19,
+    "source": "~/.config/fastfetch/logos/arch2-gradient.txt"
+  },
+
+  "display": {
+    "separator": "",
+    "color": { "keys": "white", "title": "white" },
+    "percent": { "type": 11, "color": { "green": "white", "yellow": "white", "red": "white" } },
+    "bar": {
+      "char": { "elapsed": "■", "total": "■" },
+      "border": { "left": "", "right": "" },
+      "color": { "elapsed": "38;2;255;255;255", "total": "38;2;85;85;85" },
+      "width": 10
+    },
+    "constants": [
+      "\u001b[48;2;255;255;255m\u001b[38;2;0;0;0m",
+      "\u001b[49m\u001b[38;2;255;255;255m",
+      "\u001b[38;2;255;255;255m▏                                                            ▕\u001b[60D"
+    ]
+  },
+
+  "modules": [
+    { "type": "custom", "key": " ", "format": "" },
+    { "type": "custom", "key": " ", "format": "" },
+
+    {
+      "type": "custom",
+      "key": "{$1}              ",
+      "format": "{#97}{$2}🭽▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔🭾"
+    },
+
+    // === IDENTITY ===
+    {
+      "type": "title",
+      "key": "{$1}   User      ",
+      "format": "{$2}{$3}{user-name}  {#2}[{home-dir}]"
+    },
+    {
+      "type": "title",
+      "key": "{$1}   Host      ",
+      "format": "{$2}{$3}{host-name}"
+    },
+    {
+      "type": "host",
+      "key": "{$1}   Machine   ",
+      "format": "{$2}{$3}{name} {#2}{version}"
+    },
+
+    // === SYSTEM ===
+    {
+      "type": "os",
+      "key": "{$1}   OS        ",
+      "format": "{$2}{$3}{pretty-name} {#2}[{arch}]"
+    },
+    {
+      "type": "command",
+      "key": "{$1}   Kernel    ",
+      "text": "uname -r | sed 's/-cachyos$/-dirga/'",
+      "format": "{$2}{$3}custom_kernel_gweh {#2}[{result}]"
+    },
+    {
+      "type": "packages",
+      "key": "{$1}   Packages  ",
+      "format": "{$2}{$3}{pacman} (pacman)"
+    },
+
+    // === ENVIRONMENT ===
+    {
+      "type": "de",
+      "key": "{$1}   Desktop   ",
+      "format": "{$2}{$3}{pretty-name} {version}"
+    },
+    {
+      "type": "shell",
+      "key": "{$1}   Shell     ",
+      "format": "{$2}{$3}{pretty-name} {version}"
+    },
+    {
+      "type": "terminal",
+      "key": "{$1}   Terminal  ",
+      "format": "{$2}{$3}{pretty-name} {version}"
+    },
+
+    // === HARDWARE ===
+    {
+      "type": "cpu",
+      "key": "{$1}   CPU       ",
+      "temp": true,
+      "format": "{$2}{$3}{name} {#2}[{freq-max}]"
+    },
+    {
+      "type": "gpu",
+      "key": "{$1}  󰢮 GPU       ",
+      "format": "{$2}{$3}{name}"
+    },
+    {
+      "type": "display",
+      "key": "{$1}   Display   ",
+      "format": "{$2}{$3}{width}x{height} @ {refresh-rate} Hz {#2}[{inch}\" {type}]"
+    },
+    { 
+      "type": "memory",
+      "key": "{$1}  󰍛 Memory    ",
+      "format": "{$2}{$3}{percentage-bar}{$2} {used} / {total} ({percentage}{$2})"
+    },
+    {
+      "type": "disk",
+      "key": "{$1}   Disk      ",
+      "format": "{$2}{$3}{size-percentage-bar}{$2} {size-used} / {size-total} ({size-percentage}{$2}) - {filesystem}"
+    },
+    {
+      "type": "battery",
+      "key": "{$1}   Battery   ",
+      "format": "{$2}{$3}{capacity-bar}{$2} {capacity}{$2} {status}"
+    },
+
+    // === STATUS ===
+    {
+      "type": "uptime",
+      "key": "{$1}   Uptime    ",
+      "format": "{$2}{$3}{hours}:{minutes}:{seconds}"
+    },
+    {
+      "type": "datetime",
+      "key": "{$1}   Datetime  ",
+      "format": "{$2}{$3}{year}-{month-pretty}-{day-in-month} {hour-pretty}:{minute-pretty}:{second-pretty}"
+    },
+
+    // === FOOTER ===
+    {
+      "type": "custom",
+      "key": "{$1}              ",
+      "format": "{#97}{$2}🭼▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁🭿"
+    },
+    { "type": "custom", "key": "{#38;2;255;255;255}████{#38;2;241;241;241}████{#38;2;227;227;227}████{#38;2;212;212;212}████{#38;2;198;198;198}████{#38;2;184;184;184}████{#38;2;170;170;170}████{#38;2;156;156;156}████{#38;2;142;142;142}████{#38;2;128;128;128}████{#38;2;113;113;113}████{#38;2;99;99;99}████{#38;2;85;85;85}████{#38;2;71;71;71}████{#38;2;57;57;57}████{#38;2;42;42;42}████{#38;2;28;28;28}████{#38;2;14;14;14}████{#38;2;0;0;0}████", "format": "" },
+    { "type": "custom", "key": " ", "format": "" }
+  ]
+}
