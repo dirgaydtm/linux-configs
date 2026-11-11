@@ -1,35 +1,21 @@
-# Fastfetch Preset
-<h3> Welcome to my fastfetch config presets😁</h3>
+<h3> Welcome to my Linux config collection😁</h3>
 
-[Fastfetch](https://github.com/fastfetch-cli/fastfetch) is a tool for fetching system info and displaying it in a nice way.  
-This repo is just a collection of my personal Fastfetch configs that I use on [Arch Linux](https://archlinux.org/).
+These are my personal configs, refined for daily use on [Arch Linux](https://archlinux.org/).
 
-✨Feel free to copy, modify, or clone the whole repo.
+I love customizing pretty much everything, and when I found Arch, it felt like I finally had the freedom I'd been missing for so long. There were still limits, though. I couldn't find configs that matched my style, and the few I did find only covered one part of the system and didn't fit with the rest of my setup. I'm also unemployed (haha), so I got bored and started making my own configs that look the way I want. Right now it's just GRUB and Fastfetch, but I might add more later, like zsh or Oh My Posh.
 
-Nothing fancy here — just presets I use daily.  
-Clean, simple, and looks nice in the terminal.👌
+Nothing fancy here, just simple configs that look clean and nice.👌
 
-<img src="./screenshot/preview.png" alt="Preview Image"/>
+Feel free to copy or modify.
 
-## Requirements⚙️
-- fastfetch (recommended: latest version)
-- A terminal with color support
-- Nerd Font (optional, for better icon rendering)
+## What's inside📦
+| Folder | What |
+|--------|------|
+| [`fastfetch/`](fastfetch/) | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) configs |
+| [`grub/`](grub/) | [GRUB](https://www.gnu.org/software/grub/) bootloader themes |
 
-## Installation🛠️
 ```bash
-# generate default config if it doesn't exist
-fastfetch --gen-config
-
-# clone the repo everywhere you want (you can delete it after copying the preset)
-git clone https://github.com/dirgaydtm/fastfetch-presets
-
-# go to the folder
-cd fastfetch-presets/presets
-
-# copy the preset you want
-cp <preset-name>.jsonc ~/.config/fastfetch/config.jsonc
-
-# run fastfetch to see the changes
-fastfetch
+# clone the repo everywhere you want (you can delete it after copying what you need)
+git clone https://github.com/dirgaydtm/linux-configs
+cd linux-configs
 ```
